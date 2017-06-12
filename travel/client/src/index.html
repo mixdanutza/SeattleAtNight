@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Client</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">\
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	 
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+
+	  
+	<script>
+		$(document).ready(function(){
+			var city= "Seattle"	
+			$.get("http://api.openweathermap.org/data/2.5/weather?q="+city+"&APPID=c682543d8fe674891eb371af1b862a90", function(data){
+				console.log(data);
+			  let temp=(data.main.temp)*9/5 - 459.67;
+        let t= Math.floor(temp)
+				let description=data.weather[0].description
+        let condition_id=data.weather[0].id
+        console.log(">>>",condition_id)
+        console.log(">>>")
+        
+        if(condition_id>=200 && condition_id<=531 ){
+          $("#weather_container").addClass("cloudy"); 
+  	  		$('#suggestion').append("<p> You might want take an umbrella with you! </p>");          
+        }else if(condition_id>=600 && condition_id<=622){
+          $("#weather_container").addClass("snow");     
+  	  		$('#suggestion').append("<p> Let it snow! Let it snow! </p>");
+  	  		$('#suggestion').append("<p> Be extra careful on the road today! </p>");            
+        }else if(condition_id>=800 && condition_id<=804){
+          $("#weather_container").addClass("sunny");     
+  	  		$('#suggestion').append("<p> It is not going to rain in Seattle today, amazing!</p>");              
+        }else if(condition_id>=701 && condition_id<=781){
+          $("#weather_container").addClass("fog");     
+  	  		$('#suggestion').append("<p> I bet your fog lights are working fine!</p>");
+        }
+		   	$('#weather').append("<h1>"+t+"°F</h1>");
+	  		$('#weather_rain').append("<p>"+t+" °F </p>");
+	  		$('#weather_description').append("<p>"+description+" </p>");
+				
+			});			
+		});
+		$('.carousel').carousel({
+				interval: 3000
+		});
+		</script>
+</head>
+<body>
+  <app-root>Loading...</app-root>
+	<script>
+      var map;
+      function initMap() {
+        var pyrmont = {lat:47.6062, lng: -122.3321};
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: pyrmont,
+          zoom: 12,
+          styles: [
+                  {
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#242f3e"
+                      }
+                    ]
+                  },
+                  {
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#746855"
+                      }
+                    ]
+                  },
+                  {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                      {
+                        "color": "#242f3e"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "administrative.locality",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#d59563"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "poi",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#d59563"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#263c3f"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "poi.park",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#6b9a76"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#38414e"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "road",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                      {
+                        "color": "#212a37"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "road",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#9ca5b3"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#746855"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                      {
+                        "color": "#1f2835"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#f3d19c"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#2f3948"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "transit.station",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#d59563"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [
+                      {
+                        "color": "#17263c"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                      {
+                        "color": "#515c6d"
+                      }
+                    ]
+                  },
+                  {
+                    "featureType": "water",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                      {
+                        "color": "#17263c"
+                      }
+                    ]
+                  }
+                ],
+        });
+
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+          location: pyrmont,
+          radius: 1500,
+          type: ['night_club']
+        }, processResults);
+      }
+
+      function processResults(results, status, pagination) {
+        if (status !== google.maps.places.PlacesServiceStatus.OK) {
+          return;
+        } else {
+          createMarkers(results);
+
+          if (pagination.hasNextPage) {
+            var moreButton = document.getElementById('more');
+            moreButton.disabled = false;
+            moreButton.addEventListener('click', function() {
+              moreButton.disabled = true;
+              pagination.nextPage();
+            });
+          }
+        }
+      }
+
+      function createMarkers(places) {
+        var bounds = new google.maps.LatLngBounds();
+        var placesList = document.getElementById('places');
+
+        for (var i = 0, place; place = places[i]; i++) {
+          var image = {
+            url: place.icon,
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(25, 25)
+          };
+
+          var marker = new google.maps.Marker({
+            map: map,
+            icon: image,
+            title: place.name,
+            position: place.geometry.location
+          });
+
+          map.addListener('center_changed', function() {
+          // 3 seconds after the center of the map has changed, pan back to the
+          // marker.
+          window.setTimeout(function() {
+            map.panTo(marker.getPosition());
+          }, 3000);
+        });
+
+        marker.addListener('click', function() {
+          map.setZoom(20);
+          map.setCenter(marker.getPosition());
+        });
+
+          placesList.innerHTML += '<li>' + place.name + '</li>';
+
+          bounds.extend(place.geometry.location);
+        }
+        map.fitBounds(bounds);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJP0Cmw1akknLuVB0aOSJbnMlheHfklOc&libraries=places&callback=initMap" async defer></script>
+
+</body>
+</html>

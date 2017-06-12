@@ -1,0 +1,37 @@
+#container{
+    background-color: black;
+    padding: 2%;
+}
+
+.chip {
+    display: inline-block;
+    padding: 0 2%;
+    margin: 2%;
+    height: 100px;
+    width: 70%;
+    line-height: 50px;
+    border-radius: 50px;
+    background-color: #242124;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 100px;
+    width: 100px;
+    border-radius: 70%;
+}
+.help_title{
+    color: antiquewhite;
+    font-family:  "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 200%;
+    font-weight: bold;
+    margin: 0px;
+}
+.help_info{
+    color: antiquewhite;
+    font-family:  "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    margin: 0px;
+}

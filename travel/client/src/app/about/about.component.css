@@ -1,0 +1,92 @@
+
+#container{
+    background-color: #0A0C0B;
+}
+#header_image{
+    width: 100%;
+}
+#about_logo{
+    position: absolute;
+    background-color: transparent;
+    padding: 2%;
+    margin: 5% 0% 0% 43%;
+    color: white;
+    font-size: 30px;
+    border: 5px solid transparent;
+    -moz-border-bottom-image: -moz-linear-gradient(top left, #4F6F98 0%, white 100%);
+    -webkit-border-bottom-image: -webkit-linear-gradient(top left, #4F6F98 0%, white 100%);
+    border-image: linear-gradient(to bottom  , #4F6F98 10%, white 100%);
+    border-image-slice: 1;
+}
+.about_text{
+    font-family:  "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+p.quotes{
+    text-align: center;
+    font-family:  "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+
+
+
+
+
+.gallery {
+  width: 80%;
+  margin: 0 auto;
+  padding: 5px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.gallery > div > img {
+  display: block;
+  width: 100%;
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  transform: scale(1.7,1.7);
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+h1 {
+  margin: 40px 0;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+}
+img.gallery{
+    width: 100%;
+    vertical-align: top;
+}
+.glry{
+    width: 33.3%;
+    vertical-align: top;
+    
+}

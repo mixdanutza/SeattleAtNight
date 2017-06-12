@@ -1,0 +1,62 @@
+#container{
+    background-color: #000000;
+}
+#logo{
+    background-color: #000000;
+      border: 3px solid transparent;
+    -moz-border-bottom-image: -moz-linear-gradient(top left, #000000 0%, #816237 100%);
+    -webkit-border-bottom-image: -webkit-linear-gradient(top left, #000000 0%, #816237 100%);
+    border-image: linear-gradient(to bottom  , #000000 0%, #816237 100%);
+    border-image-slice: 1;
+}
+
+
+h1.gold_text{
+    font-size: 40px;
+    margin-bottom: 5%;
+    color: #816237;
+    font-family:  "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-stretch: ultra-expanded;
+    font-weight: 100;
+    text-align: center;
+}
+h2.gold_text{
+    font-size: 40px;
+    margin-bottom: 5%;
+    color: #816237;
+    font-family:  "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-stretch: ultra-expanded;
+    font-weight: 100;
+    text-align: center;
+}
+
+.img_about{
+    margin-top: 2%;
+    width: 33%;
+    display: inline-block;
+}
+h1.gliph_text{
+    text-align: center;
+    font-size: 200%;
+    color: #816237;
+    font-family:  "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-stretch: ultra-expanded;
+    font-weight: 100;
+    text-align: center;
+}
+
+.fa{
+    color: #816237;
+    font-size: 50px;
+    margin: 0% 45% 0% 45%;
+}
+
+.about{
+    padding: 5% 15% 5% 15%;
+    font-size: 180%;
+    color: #757575;
+    font-family:  "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+p{
+    margin: 0px;
+}

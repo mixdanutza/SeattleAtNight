@@ -1,0 +1,44 @@
+#container{
+    background-color: #0B0505;
+    border: 3px solid transparent;
+    -moz-border-bottom-image: -moz-linear-gradient(top left, #0B0505 0%, #816237 100%);
+    -webkit-border-bottom-image: -webkit-linear-gradient(top left, #0B0505 0%, #816237 100%);
+    border-image: linear-gradient(to bottom  , #0B0505 0%, #816237 100%);
+    border-image-slice: 1;
+}
+
+h1.gold_text{
+    font-size: 100px;
+    color: #816237;
+    font-family:  "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-stretch: ultra-expanded;
+    font-weight: 100;
+    text-align: center;
+}
+
+#img_logo{
+    width: 100px;
+    margin: auto;
+}
+
+#all_seattle{
+    width: 100%;
+}
+#main_img {
+   width: 100%;
+   position: relative;
+}
+#weather {
+   position: absolute;
+   background-color: transparent;
+   padding: 2%;
+   margin: 5% 45% 0% 45%;
+   color: #816237;
+   font-size: 20px;
+   border: 2px solid transparent;
+    -moz-border-bottom-image: -moz-linear-gradient(top left, #140C0A 0%, #816237 100%);
+    -webkit-border-bottom-image: -webkit-linear-gradient(top left, #140C0A 0%, #816237 100%);
+    border-image: linear-gradient(to bottom  , #140C0A 10%, #816237 100%);
+    border-image-slice: 1;
+}
+

@@ -1,0 +1,35 @@
+/*VAVIGATION BAR*/
+
+.navbar-nav {
+    float: left;
+    margin: 0;
+    background-color: black;
+}
+div#navbar-collapse-3.collapse.navbar-collapse{
+    background-color: #0B0505 ;
+    padding: 10px;
+    border:  0px;
+
+}
+nav#nav.navbar.navbar-inverse{
+    background: #0B0505;
+    margin:  0% 0% 0.5% 0%;
+}
+a{
+    margin: 10px;
+    font-size: 20px;
+    
+}
+a:hover {
+    color: #816237;
+}
+.navbar-nav[_ngcontent-c7] {
+    float: left;
+    margin: 0;
+    background-color: black;
+    width: 100%;
+}
+.navbar-nav>li {
+    float: left;
+    margin: 0% 0% 0% 8%;
+}
