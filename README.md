@@ -4,10 +4,10 @@
     <li> OpenWeatherMap API</li>
     <li> Google Maps API  </li>
     <li> Java Script </li>
-    <li> Angular JS </li>
+    <li> Angular</li>
     <li> Mongo DB </li>
     <li> Express </li>
-    <li> HTML/CS </li>
+    <li> HTML/CSS </li>
     <li> Bootstrap </li>    
 </ul>
 
